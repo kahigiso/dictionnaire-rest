@@ -1,0 +1,17 @@
+.DS_Store
+.settings
+.springBeans
+.gradletasknamecache
+.idea
+.gradle
+.classpath
+.project
+
+out
+test-output
+atlassian-ide-plugin.xml
+.gradletasknamecache
+*.iml
+*.ipr
+*.iws
+/target/
