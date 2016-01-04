@@ -20,7 +20,7 @@ import javax.persistence.TemporalType;
 public class Mot {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	private Long id;
 	@Column(nullable=false)
 	private String mot;

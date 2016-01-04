@@ -10,20 +10,20 @@ import javax.persistence.OneToOne;
 @Entity
 public class MotFrancais extends Mot{
 	
-	@Column(unique=true)
-	private String precision;
+	@Column(nullable=true)
+	private String precizion;
 	@ManyToOne
-	@JoinColumn(nullable = false)
+	@JoinColumn(nullable = true)
 	private Domaine domaine;
-	@OneToOne(mappedBy="motFrancais",fetch=FetchType.EAGER)
+	@OneToOne(mappedBy="motFrancais", fetch=FetchType.EAGER)
 	@JoinColumn(nullable=true)
 	private MotMashi motMashi;
 	
-	public String getPrecision() {
-		return precision;
+	public String getPrecizion() {
+		return precizion;
 	}
-	public void setPrecision(String precision) {
-		this.precision = precision;
+	public void setPrecizion(String precizion) {
+		this.precizion = precizion;
 	}
 	public Domaine getDomaine() {
 		return domaine;
@@ -42,7 +42,7 @@ public class MotFrancais extends Mot{
 	@Override
 	public String toString() {
 		return "MotFrancais [id=" + super.getMot() + ", mot=" + super.getMot() + ", precision="
-				+ precision + ", motMashi=" + motMashi + "]";
+				+ precizion + ", motMashi=" + motMashi + "]";
 	}
 	
 }

@@ -25,5 +25,9 @@ public class MotFrancaisService {
 	public MotFrancais findByMot(String mot){
 		return motFrancaisRepository.findByMot(mot);
 	}
+	
+	public MotFrancais findByMotAndPrecizion(String mot, String precizion){
+		return motFrancaisRepository.findByMotAndPrecizion(mot,precizion);
+	}
 
 }

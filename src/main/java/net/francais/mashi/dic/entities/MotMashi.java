@@ -26,9 +26,9 @@ public class MotMashi extends Mot {
 	@JoinColumn(name = "langue_origine", nullable = true)
 	private LangueOrigine langueOrigine;
 	@ManyToOne
-	@JoinColumn(nullable = false)
+	@JoinColumn(nullable = true)
 	private Nature nature;
-	@OneToOne
+	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "mot_francais")
 	private MotFrancais motFrancais;
 

@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -39,7 +40,7 @@ public class Domaine {
 	@Column(nullable=false)
 	@Temporal(TemporalType.DATE)
 	private Date updated;
-	@OneToMany(mappedBy="domaine")
+	@OneToMany(mappedBy="domaine", fetch=FetchType.EAGER)
 	private Set<MotFrancais> motsFrancais = new HashSet<MotFrancais>();
 		
 	public Long getId() {
